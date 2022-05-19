@@ -1,9 +1,9 @@
 # keepawake
 
 Very simple powershell scripts to keep your computer awake. Choose whichever works best for you.<br><br>
-`keepalive.ps1` - Runs indefinitely. No shenanigans. <br><br>
-`keepalive_prompt.ps1` - Prompts you to enter the time you want the script to run until every time you run the script.<br><br>
-`keepalive_time.ps1` - Set the time you want the script to run until from within the script for simpler reuse.<br><br>
+`keepawake.ps1` - Runs indefinitely. No shenanigans. <br><br>
+`keepawake_prompt.ps1` - Prompts you to enter the time you want the script to run until every time you run the script.<br><br>
+`keepawake_time.ps1` - Set the time you want the script to run until from within the script for simpler reuse.<br><br>
 
 
 ## Can't run .ps1 files?
