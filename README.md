@@ -7,7 +7,7 @@ Very simple powershell scripts to keep your computer awake. Choose whichever wor
 
 
 ## Can't run .ps1 files?
-Sometimes organizations will not allow .ps1 files to run directly. Fear not, as long as PowerShell ISE is still installed you can run the scripts.
+Sometimes organizations will not allow .ps1 files to run directly. No worries, as long as PowerShell ISE is still installed you can run the scripts.
 #### Steps to follow:
 - Hit the windows key
 - Type "PowerShell ISE" and Press Enter
