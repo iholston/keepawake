@@ -3,7 +3,7 @@ $WShell = New-Object -com "Wscript.Shell"
 while ($(Get-Date) -lt $TimeEnd)
 {
   Clear-Host
-  Write-Host "keepalive_time.ps1 running until => $TimeEnd`n"
+  Write-Host "keepawake_time.ps1 running until => $TimeEnd`n"
   Write-Host “$($TimeEnd.Subtract($(Get-Date)).ToString(“hh' hours 'mm' minutes 'ss")) seconds remaining.”
   $WShell.sendkeys("{SCROLLLOCK}")
   Start-Sleep -Milliseconds 100
@@ -11,4 +11,4 @@ while ($(Get-Date) -lt $TimeEnd)
   Start-Sleep -Seconds 60
 }
 Clear-Host
-Write-Host "$TimeEnd has passed. keepalive_time.ps1 exiting...`n"
+Write-Host "$TimeEnd has passed. keepawake_time.ps1 exiting...`n"
