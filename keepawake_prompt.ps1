@@ -1,5 +1,5 @@
 Clear-Host
-Write-Host "keepalive.ps1 running..."
+Write-Host "keepawake_prompt.ps1 running..."
 Write-Host "Please enter the time you would like this script to end."
 while (1) {
     $EndHour = Read-Host -Prompt "`nPlease enter the hour only. Military style (0-23)"
@@ -37,4 +37,4 @@ while ($(Get-Date) -lt $TimeEnd)
   Start-Sleep -Seconds 60
 }
 Clear-Host
-Write-Host "$TimeEnd has passed. keepalive_time.ps1 exiting...`n"
+Write-Host "$TimeEnd has passed. keepawake_prompt.ps1 exiting...`n"
