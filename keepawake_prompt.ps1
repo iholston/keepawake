@@ -1,29 +1,17 @@
 Clear-Host
-Write-Host "keepawake_prompt.ps1 running..."
-Write-Host "Please enter the time you would like this script to end."
+Write-Host "keepawake_prompt.ps1 running...`nPlease enter the time you would like this script to end."
 while (1) {
-    $EndHour = Read-Host -Prompt "`nPlease enter the hour only. Military style (0-23)"
-    $EndHour = [int]$EndHour
-    if (($EndHour -lt 0) -or ($EndHour -gt 23)) {
-        Clear-Host
-        Write-Host "Invalid Number."
-        Write-Host "Please enter number between 0 and 23. If the hour is a PM number simply add 12 to it. Example 5:30 PM becomes 17:30 military time"
-        continue
-    }
-    break
+    $EndHour = [int]$(Read-Host -Prompt "`nPlease enter the hour only. Military time (0-23)")
+    if (($EndHour -ge 0) -and ($EndHour -lt 24)) {break}
+    Clear-Host
+    Write-Host "Invalid Number. Please enter number between 0 and 23. If the hour is a PM number simply add 12 to it. Example: 5:30 PM becomes 17:30 military time." 
 }
 while (1) {
-    $EndMinute = Read-Host -Prompt "`nPlease enter the minutes. Hour: $EndHour Minutes"
-    $EndMinute = [int]$EndMinute
-    if (($EndMinute -lt 0) -or ($EndMinute -gt 59)) {
-        Clear-Host
-        Write-Host "Invalid Number."
-        Write-Host "Please enter number between 0 and 59 for the minutes."
-        continue
-    }
-    break
+    $EndMinute = [int]$(Read-Host -Prompt "`nPlease enter the minutes. Hour: $EndHour Minutes")
+    if (($EndMinute -ge 0) -and ($EndMinute -lt 60)) {break}
+    Clear-Host
+    Write-Host "Invalid Number. Please enter number between 0 and 59 for the minutes." 
 }
-
 $TimeEnd = Get-Date -Hour $EndHour -Minute $EndMinute -Second 00 # Enter the time you want the script to end here. Hours are from 0-24. 17:30 = 5:30pm.
 $WShell = New-Object -com "Wscript.Shell"
 while ($(Get-Date) -lt $TimeEnd)
